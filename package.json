@@ -1,0 +1,17 @@
+{
+  "name": "rankify-ranking-payments",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "description": "Rankify Ranking static editor with Stripe and Supabase serverless API",
+  "scripts": {
+    "dev": "vercel dev",
+    "preflight": "node scripts/preflight.mjs",
+    "check": "node --check lib/core.js && node --check lib/stripe-billing.js && node --check api/checkout.js && node --check api/webhook.js && node --check api/portal.js && node --check api/status.js && node --check api/export/start.js && node --check api/export/complete.js && node --check api/public-config.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.57.0",
+    "stripe": "19.0.0"
+  },
+  "engines": { "node": ">=20" }
+}
